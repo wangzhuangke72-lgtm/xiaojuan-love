@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff1f4">
+  <meta name="description" content="一份只属于小娟宝宝的浪漫惊喜。">
+  <title>小娟宝宝 ❤️ 我们的浪漫宇宙</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true" id="ambient"></div>
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="播放背景音乐" title="播放背景音乐">♫</button>
+  <audio id="music" src="./assets/music.mp3" loop preload="none"></audio>
+  <main>
+    <section class="scene active opening" id="opening" aria-labelledby="opening-title">
+      <div class="hero-orbit" aria-hidden="true"><span>♡</span><i>✦</i><b>♡</b></div>
+      <p class="eyebrow">A LITTLE LOVE LETTER</p>
+      <h1 id="opening-title">小娟宝宝 <span>♡</span></h1>
+      <p class="lead">有一份只属于你的小惊喜，<br>想亲手交给你。</p>
+      <button class="primary" data-go="story">点击开启我们的浪漫故事 💗</button>
+      <p class="tiny-note">请把这一刻，留给我们。</p>
+    </section>
+
+    <section class="scene story" id="story" aria-labelledby="story-title" hidden>
+      <p class="eyebrow">CHAPTER 01 · 相遇之后</p>
+      <h2 id="story-title">因为有你，日常也闪闪发光</h2>
+      <div class="story-lines" aria-live="polite">
+        <p>遇见你之前，日子只是日子。</p><p>遇见你之后，平凡也有了光。</p>
+        <p>我喜欢和你分享每一个普通的瞬间。</p><p>因为只要有你，普通的日子也会变得特别。</p>
+        <p class="last-line">小娟宝宝，谢谢你来到我的世界。</p>
+      </div>
+      <button class="primary" data-go="letter">继续看看我的心里话 <span>→</span></button>
+    </section>
+
+    <section class="scene letter-scene" id="letter" aria-labelledby="letter-title" hidden>
+      <p class="eyebrow">CHAPTER 02 · 写给你</p>
+      <h2 id="letter-title">一封只给你的信</h2>
+      <div class="envelope-wrap">
+        <button class="envelope" id="envelope" type="button" aria-label="打开写给小娟宝宝的信">
+          <span class="env-flap"></span><span class="env-heart">♡</span>
+          <span class="env-label">To：我最爱的小娟宝宝</span>
+        </button>
+      </div>
+      <article class="letter-paper" id="letterPaper" aria-label="情书" hidden>
+        <p id="letterText"></p>
+        <button class="text-button" id="showAll" type="button">立即显示全文</button>
+        <button class="secret-star" id="secretStar" type="button" aria-label="隐藏惊喜，连续点击五次">✦</button>
+      </article>
+      <div class="secret-card" id="secretCard" hidden>
+        <button class="close-secret" id="closeSecret" aria-label="关闭秘密情书">×</button>
+        <p class="eyebrow">A SECRET FOR YOU</p><h3>嘘！小娟宝宝发现隐藏惊喜啦 💝</h3>
+        <p>这里偷偷藏着一个秘密。</p><p>我不只是今天喜欢你。</p>
+        <p>我想在很多很多个明天里，继续坚定地选择你。</p>
+        <p>希望未来的某一天，我们回头看时，会发现一路都有彼此。</p>
+        <strong>专属于小娟宝宝的无限偏爱 ♡</strong>
+      </div>
+      <button class="primary next-letter" id="letterNext" data-go="question" hidden>把心意告诉你 <span>→</span></button>
+    </section>
+
+    <section class="scene question" id="question" aria-labelledby="question-title" hidden>
+      <p class="eyebrow">CHAPTER 03 · 未来的故事</p>
+      <div class="question-heart" aria-hidden="true">♡</div>
+      <h2 id="question-title">小娟宝宝 ❤️</h2>
+      <p class="lead">和你在一起，是一件让我一直觉得幸福的事情。</p>
+      <p class="question-copy">你愿意继续陪我，把以后的每一天都写成我们的故事吗？</p>
+      <div class="choice-row"><button class="primary" id="yesButton">当然愿意 ❤️</button><button class="secondary" id="hugButton">先抱抱再说 🥰</button></div>
+    </section>
+
+    <section class="scene finale" id="finale" aria-live="polite" hidden>
+      <div class="big-heart" aria-hidden="true">♡</div><p class="eyebrow">OUR STORY GOES ON</p>
+      <h2 id="finalTitle">小娟宝宝，我会继续好好爱你！</h2><p>故事未完，爱你不止。</p>
+      <button class="secondary" data-go="opening">重新观看 ↺</button>
+    </section>
+    <section class="scene hug-scene" id="hugScene" aria-live="polite" hidden>
+      <div class="hug-emoji" aria-hidden="true">🫂</div><h2>那就先给小娟宝宝一个大大的拥抱！</h2>
+      <button class="primary" data-go="question">回到告白问题</button>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
